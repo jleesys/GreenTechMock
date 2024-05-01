@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html body {
+    font-family: Rubik, sans-serif;
+    color: #000;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.homepage-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+section {
+    height: 100vh;
+    font-size: 1.2rem;
+}
+
+.content {
+    padding: 18rem 0;
+    /* max-width: 600px; */
+    max-width: 50rem;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+.content p {
+    padding: 25px 0 0;
+}
+
+.toggle {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: green url(../images/menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: green url(../images/close.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 25;
+}
+
+.btn {
+    padding: 15px 30px;
+    margin: 20px 0;
+    text-align: center;
+    background: #adff2f;
+    width: 100px;
+    transition-duration: .5s;
+}
+
+.btn:hover {
+    transform: scale(.85);
+    cursor: pointer;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3.5rem;
+    position: fixed;
+    background-color: #ffff;
+    top: 0;
+    /* left: 0; */
+    transition-duration: .5s;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+}
+
+.navigation.active {
+    left: 0;
+}
+
+.navigation .socials {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: absolute;
+    left: 1rem;
+}
+
+.navigation .socials img:hover {
+    transform: scale(1.4);
+    transition-duration: .5s;
+}
+
+.email-icon {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+}
+
+.navigation .email-icon img:hover {
+    transform: scale(1.4);
+    transition-duration: .5s;
+}
+
+.navigation ul li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.navigation ul li a:hover {
+    color: greenyellow;
+}
+
+header .navigation ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.background-container img {
+    /* position: absolute;
+    bottom: 0;
+    right: 0; */
+    z-index: -2;
+    width: 45rem;
+    height: 100vh;
+}
+
+@media(max-width: 1068px) {
+    .background-container {
+        display: none;
+    }
+
+    .logo {
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .content {
+        position: absolute;
+        left: 1.5rem;
+        padding: 8.5rem 2rem;
+    }
+}
